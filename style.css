@@ -1,0 +1,34 @@
+.dataTable {
+    border-collapse: collapse;
+}
+
+.dataTableThread {
+    background-color: black;
+    color: white;
+}
+
+.dataTableThread th {
+    padding-left: 12px;
+    text-align: start;
+}
+
+.headerTitle, .nameContent, .problemContent, .ownerContent {
+    min-width: 200px;
+}
+
+td {
+    padding-left: 12px;
+    text-align: start;
+}
+
+td.problemContent, td.urlsContent {
+    color: gray;
+}
+
+td.problemContent {
+    font-style: italic;
+}
+
+td.ownerContent {
+    color: blue;
+}

@@ -7,14 +7,6 @@ var Controller = {
     init: function () {
         var data = _data_from_backend;
 
-        var toggleSort = false;
-
-        if (toggleSort) {
-            var sortedData = _data_from_backend.sort(function (a, b) {
-                return a.name.localeCompare(b.name);
-            })
-        }
-
         var dataDisplay = document.getElementById("dataDisplay");
 
         var dataTable = document.createElement("table");
@@ -23,17 +15,17 @@ var Controller = {
         var dataTableThread = document.createElement("thead");
         dataTableThread.className = "dataTableThread";
 
-        var dataTableThreadRow = document.createElement("tr");
-        dataTableThreadRow.className = "dataTableThreadRow";
+        var dataTableHeadRow = document.createElement("tr");
+        dataTableHeadRow.className = "dataTableHeadRow";
 
-        dataTableThread.appendChild(dataTableThreadRow)
+        dataTableThread.appendChild(dataTableHeadRow)
 
         var tableHeaderTitle = ["Nom", "Problèmes", "Propriétaire", "Nombre d'url"]
         tableHeaderTitle.forEach(function (item) {
             var th = document.createElement("th");
             th.className = "headerTitle"
             th.textContent = item;
-            dataTableThreadRow.appendChild(th);
+            dataTableHeadRow.appendChild(th);
         });
 
         dataTable.appendChild(dataTableThread)
